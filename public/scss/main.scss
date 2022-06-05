@@ -1,0 +1,72 @@
+@import 'kanban';
+@import 'navigation';
+@import 'responsive';
+@import 'popup';
+@import 'timer';
+@import 'musicplayer';
+
+
+// general style, fonts..
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@400;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/tenorite');
+@import url('http://fonts.cdnfonts.com/css/gotham');
+
+
+html, body {
+    max-height: 100vh;
+    max-width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 0;
+    background-color: #fafafa;
+    position: relative;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+}
+
+/*setting fonts*/
+p {
+    font-family: "biryani";
+}
+h1, h2, h3, h4 {
+    font-family: "Gotham";
+    color: #2d2d2d;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+
+h5 {
+    font-family: "tenorite";
+    color: #2d2d2d;
+    font-size: 16px;
+  }
+  
+  h6 {
+    font-family: "tenorite";
+    font-weight: bold;
+    color: #8C8C8C;
+    margin: 0;
+  }
+  
+  
+  
+  p{
+    font-family: "Tenorite";
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* applies to all buttons for consistency  */
+  button{
+    font-family: "tenorite";
+    font-size: 16px;
+    font-weight: bold;
+    
+    
+  }
