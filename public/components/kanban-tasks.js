@@ -239,9 +239,10 @@ function renderTask(task){
   // delButton.setAttribute("class", "deleteTask");
 
   let delButton = document.createElement("button");
-  // //text node
+  // text node 
   let delButtonText = document.createTextNode("Delete");
-  delButton.appendChild(delButtonText);
+  delButton.setAttribute("deleteTask", "class");
+  delButton.appendChild(delButtonText); 
 
   
   //delete button to appear on screen after a task is created
@@ -280,6 +281,3 @@ function updateEmpty(){
         document.getElementById("emptyTaskList").style.display = "block";
     }
 }
-
-// taskListArray.addtoLocalStorage(task);
-// localStorage.setItem("TaskAssigned");

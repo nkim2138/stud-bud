@@ -1,27 +1,4 @@
 
-  
-
-// a {
-//     padding: 0;
-// }
-// /*styling list from nav*/
-// ul{
-//     list-style-type: none;
-//     margin: 0;
-//     padding: 0;
-// }
-
-// li {
-//     padding-right: 10px;
-// }
-
-// .weekly-goal {
-//     float: inline-end;
-// }
-
-
-
-
 /*-----------------------------------------DIFFERENT DEVICES -----------------------------  */
 @media (max-width: 820px){
 /*   kanban */
@@ -29,11 +6,11 @@
   #kanban-board{
     overflow-x: auto;
     overflow-y: scroll;
+    width: 200%;
+    display: flex;
+    justify-content: flex-start;
   }
-  #kanban-columns {
-    width: 100%;
-  }
-  
+ 
 
   #taskForm {
     font-size:14px;
@@ -60,10 +37,28 @@
     height: 720px;
     left: 46%;
   }
+
+  .taskcColumn-btns button{
+    font-size: 12px;
+  }
+
 }
 
 /* phone screen size */
 @media only screen and (max-width: 500px){
+
+  .big {
+    display:none;
+  }
+
+  p .small {
+    display: inline-block;
+  }
+
+  #smallTimerDisplay {
+    position:relative;
+    padding:0;
+  }
 
   
   #kanban-board{
@@ -99,11 +94,17 @@
     margin: 18px;
   }
 
+  #kanban-board {
+    width: 300%;
+  }
 
-/*   row{
+  #kanban-columns {
     display: flex;
-    justify-content: space-between;
-  } */
+    justify-content: flex-start;
+  }
+  
+  
+
 
 /*   extend columns from due date to time complete */
   .taskcolumn-2 {
@@ -124,5 +125,13 @@
    #cancel {
     padding: 10px 35px;
   }
+
+  #addMaterial span {
+    display:none;
+  }
+  #addColumn {
+    display: none;
+  }
+
   
 }

@@ -1,5 +1,9 @@
 # stud-bud
 # **STUDBUD**
+
+
+Moved from https://github.com/nkim2138/studbud22.git due to issues of exceeding 100MB. However when I was deleting files that were not needed to be tracked it deleted my progress somehow. I tried to retrieve but some of it was missing so i could only fix a bit
+
 ## **A2 FEEDBACK**
 
 Regarding the previous assessment, I received feedback from my tutor on my design to improve the user experience:

@@ -87,7 +87,8 @@ const materialNameInput = document.querySelector("#materialNameInput") //# to ge
 const materialList = document.getElementById("materialList");
 const materialDescriptionInput = document.getElementById("materialDescriptionInput");
 const unitOfStudyInput = document.getElementById("unitOfStudyInput");
-
+const materialGroupInput = document.getElementById("materialGroupInput");
+const materialLinkInput = document.getElementById("materialLinkInput")
 
 
 // getting the button create
@@ -97,72 +98,63 @@ const tasksColumn = document.getElementById("tasksColumn");
 
 //parameter 1 - event itself which is the submit
 //parameter 2 - what we want to happen when the element is clicked on
-taskForm.addEventListener("submit", function(event) { //defining and calling at the same time
+materialForm.addEventListener("submit", function(event) { //defining and calling at the same time
   
   //none of the browser functionality will happen automatically when clicked
   event.preventDefault();
   
-  //get value from task input of user
-  let taskName = taskNameInput.value;
-  let taskDescription = taskDescriptionInput.value;
-
+  //get value from material input of user
+  let materialName = materialNameInput.value;
+  let materialDescription = materialDescriptionInput.value;
   //array of collections
   //selected index of current element
   let unitOfStudy = unitOfStudyInput.value;
   // let unitOfStudy = unitOfStudyInput.options[unitOfStudyInput.selectedIndex].value;
-  let priority = priorityInput.value;
-  let dueDate = dueDateInput.value;
-  let columnSelect = columnSelectInput.options[columnSelectInput.selectedIndex].value;
-  let completionTime = completionTimeInput.value;
-  let estimatedTime = estimatedTimeInput.value;
-  console.log(taskListArray);
+  let materialGroup = materialGroupInput.value;
+
+  console.log(materialListArray);
   
   //input bunch of parameters
-  addTask(taskName, taskDescription, unitOfStudy, priority, dueDate, columnSelect, completionTime, estimatedTime )
+  addMaterial(materialName, materialDescription, unitOfStudy)
 })
 
 
 // create empty array to store tasks
-var taskListArray = [];
+var materialListArray = [];
 
-//Define a function called addTask for dynamically creating task objects
-function addTask(name, description, unitofstudy, priority, dueDate, column, completionTime, estimatedTime ) {
+//Define a function called addMaterial for dynamically creating material objects
+function addMaterial(name, description, unitofstudy, group, link ) {
 
     let d = new Date();
     let dateCreated = d.getFullYear();
   //Create the task object
-    let task = {
+    let material = {
 
        id: Date.now(),
    //using input parameters as property names for task object as shortcut
        name,
        description, //strings as our values
        unitofstudy,
-       priority,
-       dueDate,
-       column,
-       completionTime,
-       estimatedTime,
-       taskStarted: false, //by default
-       taskCompleted: false, //by default
+       group,
+       link
  };
   
   //Push task object to taskList Array
-  taskListArray.push(task);
-  console.log(taskListArray);
-  renderTask(task); //render task to screen
+  materialListArray.push(material);
+  console.log(materialListArray);
+  renderMaterial(material); //render task to screen
 }
 
 
-//create render task function
-//share task object with the function
-function renderTask(task){
+//create render material function
+//share material object with the function
+function renderTask(material){
 
   updateEmpty();
   
   //create HTML structure (elements)
   let item = document.createElement("div");
-  item.setAttribute("data-id", task.id);
+  item.setAttribute("data-id", material.id);
 
   
   //output of the user's input in the task box
@@ -170,10 +162,7 @@ function renderTask(task){
   item.innerHTML =`
      <ul class = "newTaskCreated">
         <li class = "taskDetails" >
-            <nav class = "unit-priority">
                  <p class="createdUnitOfStudy">${task.unitofstudy}<p>
-                 <p class="createdPriority">${task.priority}<p>
-            </nav>
         </li>
 
         <li class = "taskDetails">
@@ -188,7 +177,6 @@ function renderTask(task){
         <li class = "taskDetails">
             <nav class = "dateAndTime">
                 <div class = "due">
-                    <p class="createdDueDate">${task.dueDate} | <p>
                     <p class="createdCompletionTime"> ${task.completionTime}<p>
                 </div>
                 <div class = "estimate">

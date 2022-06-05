@@ -288,6 +288,12 @@ ul, li {
   font-size: 11px;
 }
 
+.deleteTask {
+  background-color: #fafafa;
+  border: none;
+  position: absolute;
+}
+
 a {
   text-decoration: none;
 }
@@ -328,6 +334,7 @@ a {
 
 .taskColumn-btns {
   justify-content: right;
+  margin-right: 15px;
   display: flex;
   position: relative;
 }
@@ -365,14 +372,36 @@ a {
   background-color: #ef7e7e;
 }
 
+#addMaterial {
+  width: 10%;
+  box-sizing: content-box;
+  background-color: #92d1f9;
+  border: none;
+  border-radius: 5px;
+  margin-top: 7px;
+  padding: 10px;
+  box-shadow: 1px 2px 5px #e5e9ed;
+}
+
+#addMaterial:hover {
+  cursor: pointer;
+  background-color: #71b5e0;
+}
+
+.material-btn {
+  justify-content: right;
+  margin-right: 15px;
+  display: flex;
+  position: relative;
+}
+
 @media (max-width: 820px) {
   #kanban-board {
+    width: 200%;
+    justify-content: flex-start;
+    display: flex;
     overflow-x: auto;
     overflow-y: scroll;
-  }
-
-  #kanban-columns {
-    width: 100%;
   }
 
   #taskForm {
@@ -399,9 +428,26 @@ a {
     height: 720px;
     left: 46%;
   }
+
+  .taskcColumn-btns button {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
+  .big {
+    display: none;
+  }
+
+  p .small {
+    display: inline-block;
+  }
+
+  #smallTimerDisplay {
+    padding: 0;
+    position: relative;
+  }
+
   #kanban-board {
     width: 100%;
     overflow: scroll;
@@ -432,6 +478,15 @@ a {
     margin: 18px;
   }
 
+  #kanban-board {
+    width: 300%;
+  }
+
+  #kanban-columns {
+    justify-content: flex-start;
+    display: flex;
+  }
+
   .taskcolumn-2 {
     width: 80%;
     overflow: hidden;
@@ -443,6 +498,10 @@ a {
 
   #create, #cancel {
     padding: 10px 35px;
+  }
+
+  #addMaterial span, #addColumn {
+    display: none;
   }
 }
 
@@ -785,6 +844,10 @@ a .tulip {
   font-size: 13px;
   font-style: italic;
   font-weight: normal;
+}
+
+.small {
+  display: none;
 }
 
 .popup #musicPlayer {

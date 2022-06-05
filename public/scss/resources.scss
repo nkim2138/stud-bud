@@ -17,5 +17,18 @@
 
   #material-columns {
     margin: 10px;
-    overflow-y: scroll;
+    position: relative;
+    overflow: scroll;
+    height: 1000px;
   }
+
+#selectResources .active {
+    border-bottom: 3px solid #FD8E8E;
+    border-radius: 3px;
+}
+
+#selectTasks {
+  border-bottom: 3px solid #FD8E8E;
+  border-radius: 3px;
+}
+

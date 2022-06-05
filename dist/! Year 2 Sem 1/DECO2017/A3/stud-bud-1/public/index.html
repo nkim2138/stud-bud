@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="">
   <!-- <link rel="icon" href="img/favicon.png"> -->
-  <link rel="stylesheet" href="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/resources.c74267d1.css">
+  <link rel="stylesheet" href="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/index.c74267d1.css">
 </head>
 <body>
 
@@ -14,8 +14,8 @@
   <nav class="top-nav">
     <ul class="top-nav-list">
       <li><a href=""><img class="logo" src="/logo.b5bfa736.png" alt="logo" width="35%" height="auto/"></a></li>
-      <li class="nav-item" id="selectTask"><a href="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/index.html" class="active">Task</a></li>
-      <li class="nav-item" id="selectResources"><a href="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/resources.html">Resources</a></li>
+      <li class="nav-item" id="selectTask"><a href="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/index.html" class="active"><h4>Task</h4></a></li>
+      <li class="nav-item" id="selectResources"><a href="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/resources.html"><h4>Resources</h4></a></li>
       <!-- <li class="weekly-goal"><h4>Weekly Goal:</h4></li> -->
     </ul>
   </nav>
@@ -44,7 +44,7 @@
         <!--label is a piece of text that users will see-->
         <!--Task Name-->
         <label for="taskName">TASK NAME </label>
-        <input type="text" id="taskNameInput" name="taskName">
+        <input type="text" id="taskNameInput" name="taskName" required="">
 
         <br>
         <!--Description-->
@@ -56,22 +56,20 @@
         <label for="unitOfStudy">UNIT OF STUDY</label>
         <!-- automatically becomes uppercase -->
         <!-- reference to https://www.the-art-of-web.com/html/input-field-uppercase/#:~:text=On%20every%20keystroke%20a%20JavaScript,convert%20the%20value%20to%20uppercase.&text=Aside%20from%20the%20distraction%20of,changing%20it%20to%20'ABBA'. -->
-        <input type="text" name="unitOfStudy" id="unitOfStudyInput" onkeyup="this.value = this.value.toUpperCase();">
-        <!-- <select name="unitOfStudy" id="unitOfStudyInput">
-          <option value="">Select one</option>
-        </select> -->
+        <input type="text" name="unitOfStudy" id="unitOfStudyInput" onkeyup="this.value = this.value.toUpperCase();" required="">
 
       </div>
 
       <div class="taskcolumn">
 
         <!--Priority-->
-        <label for="priority" id="priorityInput">PRIORITY</label>
-        <ul class="priority-btn">
-          <li><button id="low-priority" type="button" value="Low" onclick="selectPriority()">Low</button></li>
-          <li><button id="medium-priority" type="button" value="Medium" onclick="selectPriority()">Medium</button></li>
-          <li><button id="high-priority" type="button" value="High" onclick="selectPriority()">High</button></li>
-        </ul>
+        <label for="priority">PRIORITY</label>
+        <select name="priority" id="priorityInput" required="">
+          <option value="">Select one</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
 
         <br>
 
@@ -100,12 +98,12 @@
           <div class="taskcolumn-2">
             <!--Time Input-->
             <label for="completionTime">TIME DUE</label>
-            <input type="time" id="completionTimeInput" name="completionTime">
+            <input type="time" id="completionTimeInput" name="completionTime" required="">
 
             <br>
             <!--Estimated Completion Time Input-->
             <label for="estimatedTime">TIME TO COMPLETE </label>
-            <input type="number" id="estimatedTimeInput" name="estimatedTime">
+            <input type="number" id="estimatedTimeInput" name="estimatedTime" required="">
           </div>
         </div>
         <br>
@@ -113,11 +111,12 @@
         <ul class="buttons">
           <li><button id="cancel" type="button" onclick="togglePopupTask()">Cancel</button></li>
 <!--           <li><button id="create" type="button" onclick="toggleCreateTask()">Create</button></li> -->
-          <li> <input type="submit" onclick="togglePopupTask()" value="Create" id="create"></li>
+          <li> <input type="submit" value="Create" id="create"></li>
         </ul>
       </div>
     </form>
   </div>
+
 
 <!-------------------------------KANBAN BOARD ---------------------------->
 
@@ -173,34 +172,54 @@
 
 
            <!-- ----------------------MUSIC PLAYER ----------------------------->
-         <div class="popup" id="musicPopup">
-          <div class="transparent-overlay" onclick="togglePopupTask()">
-            <div id="musicPlayer">
-              <div class="musicPlayerContent">
+        
+         <!-- ----------------------MUSIC PLAYER ----------------------------->
+       <div class="popup" id="musicPopup">
+        <div class="transparent-overlay" onclick="togglePopupMaterial()">
+          <div id="musicPlayer">
+            <div class="musicPlayerContent">
 
-              </div>
             </div>
-          </div>
-        </div>
-
-       <div id="smallMusicDisplay">
-        <div class="musicDisplayContent">
-          <div class="imageandplayer">
-            <div id="smallMusicImage" class="musicImage"></div>
-            <div class="buttons-loading">
-              <div class="music-buttons">
-                <img class="backIcon" src="/back.9af03c11.png" alt="music back button" width="8%" height="8%/">
-                <img class="playIcon" src="/play.f3408468.png" alt="play music" width="12%" height="12%/">
-                <img class="timerIcon" src="/skip.b67ab240.png" alt="skip music" width="8%" height="8%/">
-              </div>
-              <div class="music-loading">
-
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
+      <audio src="/scifi.fe965d1b.mp3" id="audio"></audio>
+     <div id="smallMusicDisplay">
+      <div class="musicDisplayContent">
+        <div class="imageandtitle">
+          <img src="/scifi.15e2294b.jpg" alt="music-cover" id="cover">
+
+          <div class="title">
+            <p id="songname">piano</p>
+            <p id="artistname">bensound</p>
+          </div>
+          
+        </div>
+          <div class="buttons-loading">
+            <div class="music-buttons">
+              <button id="prev">
+                <img class="backIcon" src="/back.9af03c11.png" alt="music back button" width="30%" height="30%/">
+              </button>
+
+              <button id="play" onclick="pauseSong()">
+                <img class="playIcon" src="/play.f3408468.png" alt="play music" width="70%" height="70%/">
+              </button>
+              <button id="pause" class="inactive" onclick="playSong()">
+                <img class="pauseIcon" src="/pause.2e1d17e3.png" alt="pause music" width="70%" height="70%/">
+              </button>
+
+              <button id="next">
+                <img class="timerIcon" src="/skip.b67ab240.png" alt="skip music" width="30%" height="30%/">
+              </button>
+             
+            </div>
+            <div class="music-loading-container">
+              <div class="music-loading"></div>
+            </div>
+
+        </div>
+      </div>
+    </div>
 
 
 
@@ -303,13 +322,13 @@
       <div id="smallTimerDisplay">
         <div class="timerDisplayContent">
           <img class="timerIcon" src="/timer.b68610c2.png" alt="logo" width="8%" height="8%/">
-          <p>Stopwatch + Pomodoro</p>
+          <p><span class="big">Stopwatch + Pomodoro</span><span class="small">Timer</span></p>
           <img onclick="toggleTimer()" class="arrowIcon" src="/arrowUp.1e83b632.png" alt="logo" width="7%" height="8%/">
         </div>
       </div>
 
     </li>
-        
+         
          
       <li class="taskColumn-btns">
         <button id="addColumn" onclick="togglePopupColumn()">+ Add Column</button>
@@ -332,7 +351,7 @@
 </html>
 
 <script src="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/resources.f3bd186e.js"></script>
-<script src="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/index.856035fe.js"></script>
-<script src="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/index.4e436ae7.js"></script>
-<script src="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/index.0f6aa93c.js"></script>
-<script src="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/index.b69a0c35.js"></script>
+<script src="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/resources.856035fe.js"></script>
+<script src="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/resources.4e436ae7.js"></script>
+<script src="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/resources.0f6aa93c.js"></script>
+<script src="/!%20Year%202%20Sem%201/DECO2017/A3/stud-bud-1/public/resources.b69a0c35.js"></script>
