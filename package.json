@@ -21,5 +21,9 @@
   "homepage": "https://github.com/nkim2138/stud-bud#readme",
   "dependencies": {
     "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0"
   }
 }

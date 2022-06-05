@@ -132,9 +132,7 @@ Dahms, K. (2019, September 12). Bubbly Bubbles 2. Retrieved from Unsplash: https
 
 dcode (2019, June 28). Make Other Elements Content Editable – HTML5 “contenteditable” attribute [Video File]. Retrieved from https://www.youtube.com/watch?v=Rm1mFbLnh88 
 
-
 Dongas R. (2022). DECO2017 Advanced Web Design, tutorial 5, week 5: Code Walkthrough – Interactive Task List [Video File]. Retrieved from https://sydney.instructuremedia.com/lti-app/embed/perspective/6jZLUBigFRNkoH_BZUAR-Q 
-
 
 Dongas R. (2022). DECO2017 Advanced Web Design, tutorial 9, week 9: Code Walkthrough – Task List Improvements [Video File]. Retrieved from https://sydney.instructuremedia.com/lti-app/embed/perspective/r-Q0ZpyggfbdqCN53ruvwg 
 
@@ -153,7 +151,6 @@ Tissot, B. (n.d.). E.R.F. Retrieved from bensound: https://www.bensound.com/roya
 Tissot, B. (n.d.). Piano Moment. Retrieved from bensound: https://www.bensound.com/royalty-free-music/track/piano-moment
 
 Tissot, B. (n.d.). Sci Fi. Retrieved from bensound: https://www.bensound.com/royalty-free-music/track/sci-fi
-
 
 Traversy Media (2021, April 11). Build a Music Player | Vanilla Javascript [Video File]. Retrieved from https://www.youtube.com/watch?v=QTHRWGn_sJw 
 
