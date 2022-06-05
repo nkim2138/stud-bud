@@ -1,0 +1,19 @@
+{
+  "name": "stud-bud-1",
+  "version": "1.0.0",
+  "description": "web application for students",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkim2138/stud-bud.git"
+  },
+  "author": "Ngo Bui Kim Anh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkim2138/stud-bud/issues"
+  },
+  "homepage": "https://github.com/nkim2138/stud-bud#readme"
+}
